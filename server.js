@@ -8,13 +8,7 @@ server.connection({
     port: 5000
 })
 
-server.route({
-    method: 'GET',
-    path: '/',
-    handler: function (request, reply) {
-        return reply('hello hapi')
-    }
-})
+server.route(require('./routes'))
 
 server.register({
     register: require('good'),
