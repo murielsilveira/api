@@ -23,14 +23,15 @@ server.register({
             }
         }]
     }
-}, function(err) {
-    if (err)
-        throw err
+}, (err) => {
+    if (err) throw err
 
-    server.start((err) => {
-        if (err)
-            throw err
+    if (!module.parent)
+        server.start((err) => {
+            if (err) throw err
 
-        console.log('Server running at:', server.info.uri)
-    })
+            console.log('Server running at:', server.info.uri)
+        })
 })
+
+module.exports = server
