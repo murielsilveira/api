@@ -1,12 +1,12 @@
-const assert = require('chai').assert
-const server = require('../../server')
+var assert = require('chai').assert
+var server = require('../../server')
 
-describe('GET /', () => {
-    it('should return HTTP 200', (done) => {
+describe('GET /', function() {
+    it('should return HTTP 200', function (done) {
         server.inject({
             method: 'GET',
             url: '/'
-        }, (response) => {
+        }, function (response) {
             assert.equal(200, response.statusCode)
             done()
         })
