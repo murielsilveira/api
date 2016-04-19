@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- tests/**/*",
-    "codecov": "node_modules/.bin/codecov"
+    "codecov": "node_modules/.bin/codecov",
+    "opencov": "open coverage/lcov-report/index.html"
   },
   "author": "https://github.com/murielsilveira",
   "license": "ISC",
