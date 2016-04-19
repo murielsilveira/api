@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "mocha tests/**/*"
+    "test": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- tests/**/*",
+    "codecov": "node_modules/.bin/codecov"
   },
   "author": "https://github.com/murielsilveira",
   "license": "ISC",
@@ -15,6 +16,8 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "codecov": "^1.0.1",
+    "istanbul": "^0.4.3",
     "mocha": "^2.4.5",
     "sinon": "^1.17.3"
   }
