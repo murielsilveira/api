@@ -23,7 +23,9 @@ server.register({
             reporter: require('good-console'),
             events: {
                 log: '*',
-                error: '*'
+                error: '*',
+                request: '*',
+                response: '*'
             }
         }]
     }
@@ -38,4 +40,3 @@ server.register({
         console.log('Server running at:', server.info.uri)
     })
 })
-
