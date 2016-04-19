@@ -24,12 +24,8 @@ server.register({
         }]
     }
 }, function(err) {
-    if (err) throw err
-
     if (!module.parent)
         server.start(function(err) {
-            if (err) throw err
-
             console.log('Server running at:', server.info.uri)
         })
 })
