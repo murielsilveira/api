@@ -1,7 +1,7 @@
 'use strict'
 
-const Hapi = require('hapi')
-const server = new Hapi.Server()
+var Hapi = require('hapi')
+var server = new Hapi.Server()
 
 server.connection({
     host: 'localhost',
@@ -23,11 +23,11 @@ server.register({
             }
         }]
     }
-}, (err) => {
+}, function(err) {
     if (err) throw err
 
     if (!module.parent)
-        server.start((err) => {
+        server.start(function(err) {
             if (err) throw err
 
             console.log('Server running at:', server.info.uri)
