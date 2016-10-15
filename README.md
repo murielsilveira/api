@@ -9,3 +9,9 @@ A simple API build with [Node](http://nodejs.org/) and [Hapi](http://hapijs.com/
 npm install
 npm run start
 ```
+
+### Running the tests
+
+```bash
+npm run test
+```
